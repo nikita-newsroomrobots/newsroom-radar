@@ -1,0 +1,157 @@
+{
+  "briefingDate": "2026-02-28",
+  "totalAudienceAnalyzed": 67,
+  "sections": [
+    {
+      "category": "Engagement Shifts",
+      "insights": [
+        {
+          "headline": "Water quality investigation turned 9 casual readers into power users — and 6 became first-time donors",
+          "detail": "Nine audience members jumped from low-to-medium engagement to scores of 4-5 after your three-part water quality investigation series (Nov 2025 – Jan 2026). Six of them — Sarah Mitchell, Kevin Park, Angela Rivera, Jennifer Patel, Rachel Hoffman, and Jason Wright — made their first-ever donations within weeks of reading the series. Average time spent on Part 3 was 11 minutes with a 98% completion rate, far above your site average.",
+          "action": "This is your strongest engagement-to-revenue pipeline. Brief the investigations team: the water quality series isn't just good journalism, it's your best donor conversion engine. Consider a Part 4 follow-up on what's changed since the investigation, and promote it to the 15+ readers who engaged deeply but haven't donated yet.",
+          "confidence": "high",
+          "dataPoints": [
+            "9 readers jumped to engagement score 4-5 after water quality series",
+            "6 became first-time donors (Mitchell, Park, Rivera, Patel, Hoffman, Wright)",
+            "Part 3 avg completion rate: 98%, avg time: 11min",
+            "Donation dates cluster Jan-Feb 2026, right after series publication"
+          ]
+        },
+        {
+          "headline": "6 engaged readers in ZIP 63101 went silent after school redistricting coverage stopped",
+          "detail": "Six readers in ZIP 63101 (Robert Williams, Patricia Kim, David Okafor, Lisa Nguyen, Michael Torres, and others) were actively reading your school redistricting coverage in Aug-Sep 2025. After the Board delayed its vote and you stopped covering the story, their engagement scores dropped to 1-2 and they're now tagged as 'lapsed.' These readers had school_redistricting and education as their primary interests.",
+          "action": "The redistricting story isn't over — the Board still hasn't voted. Assign a reporter to follow up on the delayed vote, and send a targeted re-engagement email to these 6 lapsed 63101 readers: 'We know you were following the redistricting story. Here's what's happened since.' This is a recoverable audience.",
+          "confidence": "high",
+          "dataPoints": [
+            "6 readers churned in ZIP 63101 after redistricting coverage stopped",
+            "Last engagement: Sep 2025 (school redistricting update)",
+            "All tagged 'lapsed' with engagement scores of 1-2",
+            "Previous engagement scores were 3-4 based on reading patterns"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Coverage Opportunities",
+      "insights": [
+        {
+          "headline": "Your audience is hungry for education coverage — 5 survey respondents said so explicitly",
+          "detail": "In your 2026 Reader Interest Survey, all 5 respondents mentioned education as a topic they want more of. Three specifically referenced the redistricting coverage stopping: 'the redistricting coverage was great but it stopped,' 'Education beat — you covered redistricting then just stopped.' Beyond surveys, 21 of your 67 tracked readers list education as an interest topic, making it your second-most-requested topic after local government.",
+          "action": "Consider establishing a dedicated education beat or at minimum assigning a reporter to cover the redistricting follow-up, teacher shortages, and K-12 school news regularly. The demand signal is clear from both quantitative data (21 readers interested) and qualitative feedback (survey write-ins). This is low-hanging fruit that could re-engage lapsed readers.",
+          "confidence": "high",
+          "dataPoints": [
+            "5/5 survey respondents requested more education coverage",
+            "3 respondents specifically mentioned redistricting coverage stopping",
+            "21 readers list education as an interest topic",
+            "Education is #2 most popular topic after local_government"
+          ]
+        },
+        {
+          "headline": "Survey respondents want more neighborhood-level reporting",
+          "detail": "Two survey respondents explicitly asked for 'more neighborhood-level reporting' and 'more coverage of individual neighborhoods.' This aligns with the geographic cluster data showing strong reader engagement in specific ZIP codes (63115 with 9 readers, 63116 with 5) that don't have dedicated beat coverage.",
+          "action": "Pilot a neighborhood newsletter or column focused on the 63115 area, where you have 9 engaged readers with no dedicated coverage. Test with a monthly neighborhood roundup and measure engagement response.",
+          "confidence": "medium",
+          "dataPoints": [
+            "2 survey respondents requested neighborhood-level reporting",
+            "ZIP 63115 has 9 readers with avg engagement 3.6 but no beat coverage",
+            "63115 readers' top topics: housing, local_government, education"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Audience Risks",
+      "insights": [
+        {
+          "headline": "Finance/business content is losing readers — newsletter opens dropped 70% for finance topics",
+          "detail": "Your finance-focused newsletters (Jan 13, Jan 27) averaged only 2.5 opens, compared to 9+ opens for newsletters covering local government and environment topics. Three readers interested primarily in finance (Alan Meyer, Irene Shaw, Carl Warren) have fully lapsed to engagement score 1. Your Local Business Roundup article had the lowest engagement of any content tracked: just 2 views with an average completion rate of 45%.",
+          "action": "Don't double down on finance content for now. Consider whether your finance coverage is meeting an actual need or is legacy programming. If you keep it, try bundling finance news into your popular local government newsletter rather than standalone finance issues. The data suggests your audience cares more about local government and environment.",
+          "confidence": "high",
+          "dataPoints": [
+            "Finance newsletters: 2-3 opens vs. 9-11 opens for local govt topics",
+            "3 finance-focused readers fully lapsed (scores of 1)",
+            "Local Business Roundup: 2 views, 45% avg completion",
+            "City Council Recap: 4 views, 76% avg completion — 2x the engagement"
+          ]
+        },
+        {
+          "headline": "10 readers are tagged 'lapsed' — representing 15% of your tracked audience",
+          "detail": "Ten readers have engagement scores of 1-2 and are tagged as lapsed. They cluster around two interest areas: school redistricting (6 readers in 63101) and finance (3 readers across ZIP codes). The remaining lapsed reader had general low engagement. This 15% churn rate in a 67-person tracked audience is a warning sign.",
+          "action": "Launch a targeted win-back campaign with two tracks: (1) For the 63101 redistricting cohort, send a 'here's what we're covering next in education' preview. (2) For the finance cohort, send a reader survey asking what financial coverage would be useful. Even recovering 3-4 of these 10 readers would meaningfully improve your engagement metrics.",
+          "confidence": "medium",
+          "dataPoints": [
+            "10 lapsed readers = 15% of tracked audience",
+            "6 lapsed readers cluster in ZIP 63101 (school redistricting interest)",
+            "3 lapsed readers cluster around finance topics",
+            "All lapsed readers have engagement scores of 1"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Revenue Signals",
+      "insights": [
+        {
+          "headline": "12 highly-engaged readers haven't donated yet — that's your conversion pipeline",
+          "detail": "Twelve readers have engagement scores of 4-5 but are listed as non-donors. These include Destiny Washington, Keisha Davis, Monique Taylor, Crystal Anderson (all from 63115), Thomas Weber, Marcus Brown, Laura Green, Henry Long, and others. They're reading deeply, opening newsletters, and engaging with your most popular content — but haven't been asked to donate or haven't found the right prompt.",
+          "action": "Create a targeted donation appeal specifically for these 12 readers. Reference the content they love: 'You've been reading our investigative series and local government coverage — your support makes this journalism possible.' Time it with your next high-impact story. Your data shows the water quality investigation was the strongest donation trigger; use the same playbook.",
+          "confidence": "high",
+          "dataPoints": [
+            "12 readers at engagement 4-5 with non_donor status",
+            "4 of these are in the 63115 geographic cluster",
+            "Water quality series converted 6 readers to donors in Jan-Feb 2026",
+            "Avg engagement of current donors: 4.6"
+          ]
+        },
+        {
+          "headline": "Investigative journalism is your donor conversion engine",
+          "detail": "Of the 13 donations tracked in your data, 7 came within 30 days of your water quality investigation series. Readers who engaged with all three parts of the investigation had an 85% donation rate. Your major donors (Maria Santos, Brian Clark, Wayne Cox) all list 'investigative' as a top interest. The path is clear: deep investigative reporting drives not just engagement but revenue.",
+          "action": "Make the case internally: fund another investigative project. The data supports it as both your highest-engagement and highest-revenue content type. Consider a dedicated 'investigative fund' donation appeal tied to your next big project to capture donor intent at the moment of peak engagement.",
+          "confidence": "high",
+          "dataPoints": [
+            "7 of 13 donations came within 30 days of water quality series",
+            "85% donation rate among readers who read all 3 parts",
+            "All 3 major donors list 'investigative' as a top interest",
+            "Water quality Part 3: 98% completion rate (highest of any content)"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Geographic Intelligence",
+      "insights": [
+        {
+          "headline": "ZIP 63115 is your most engaged underserved neighborhood — 9 readers, no dedicated coverage",
+          "detail": "Nine readers in ZIP 63115 (North St. Louis) have an average engagement score of 3.6 — above your overall average of 3.1. Their dominant interests are housing, local government, education, and crime. They're reading content about housing development and city council recaps, but there's no reporter assigned to cover their neighborhood. This cluster represents your biggest geographic opportunity.",
+          "action": "Assign a reporter or freelancer to cover the 63115 area for a 3-month trial. Start with the housing development story (which already drew strong engagement from this cluster) and expand to education and crime coverage. Measure engagement changes among these 9 readers as a KPI for the experiment.",
+          "confidence": "high",
+          "dataPoints": [
+            "9 readers in ZIP 63115, avg engagement 3.6",
+            "Top interests: housing (7 readers), local_government (6), education (4), crime (4)",
+            "No current beat coverage for this neighborhood",
+            "63115 readers opened local government newsletters at above-average rates"
+          ]
+        },
+        {
+          "headline": "Your donor base is geographically concentrated — 63106 and 63103 punch above their weight",
+          "detail": "ZIP codes 63106 and 63103 together account for 5 of your 13 donors despite having only 11 readers combined. Readers in these areas skew toward investigative and environmental content. Meanwhile, 63115 with its 9 readers has zero donors — a conversion opportunity if you start covering their community.",
+          "action": "For 63106/63103: These are your power neighborhoods. Consider a donor appreciation event or exclusive content for this area. For 63115: Once you start beat coverage there, implement the same donor conversion playbook that worked with the water quality series audience.",
+          "confidence": "medium",
+          "dataPoints": [
+            "63106: 4 readers, 3 donors (75% donor rate)",
+            "63103: 7 readers, 2 donors (29% donor rate)",
+            "63115: 9 readers, 0 donors (0% donor rate)",
+            "63106/63103 readers' top interest: investigative journalism"
+          ]
+        }
+      ]
+    }
+  ],
+  "topLineMetrics": {
+    "totalReaders": 67,
+    "highEngagement": 24,
+    "atRiskReaders": 10,
+    "totalDonors": 13,
+    "topTopics": ["local_government", "education", "water_quality", "housing", "investigative"]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "newsroom-radar",
+  "version": "0.1.0",
+  "description": "AI-powered audience intelligence for local newsrooms",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "newsroom-radar": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts"
+  },
+  "keywords": ["newsroom", "audience", "analytics", "journalism"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "dotenv": "^17.2.1",
+    "openai": "^5.11.0",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
