@@ -20,7 +20,6 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
   const ec = metrics.engagementChanges;
   const df = metrics.donorFunnel;
 
-  // Engagement histogram
   const histogramRows = [1, 2, 3, 4, 5].map(i => {
     const curr = metrics.engagementDistribution.current[String(i)] || 0;
     const prev = metrics.engagementDistribution.previous[String(i)] || 0;
@@ -36,7 +35,6 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
     </tr>`;
   }).join('');
 
-  // Top content
   const topContentRows = metrics.contentPerformance.slice(0, 5).map(c =>
     `<tr>
       <td style="padding:4px 8px;font-size:13px;color:#374151;">${c.title}</td>
@@ -46,7 +44,6 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
     </tr>`
   ).join('');
 
-  // Geographic
   const geoRows = metrics.geographicBreakdown.slice(0, 6).map(g => {
     const matchColor = g.contentMatchScore < 60 ? '#dc2626' : '#16a34a';
     return `<tr>
@@ -58,21 +55,18 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
     </tr>`;
   }).join('');
 
-  // Churn clusters
   const churnHtml = metrics.cohortAnalysis.churnClusters.slice(0, 3).map(c =>
     `<div style="background:#fef2f2;border-radius:6px;padding:10px;margin:6px 0;font-size:13px;">
-      <strong>ZIP ${c.postalCode}:</strong> ${c.count} readers declined (avg ${c.avgPreviousScore} → ${c.avgCurrentScore})
+      <strong>ZIP ${c.postalCode}:</strong> ${c.count} readers declined (avg ${c.avgPreviousScore} &rarr; ${c.avgCurrentScore})
       <br/><span style="color:#6b7280;">Shared interests: ${c.sharedTopics.join(', ')}</span>
     </div>`
   ).join('');
 
-  // Jumper content
   const jumperHtml = metrics.cohortAnalysis.engagementJumpersByContent.slice(0, 5).map(j => {
     const donorNote = j.newDonorCount > 0 ? ` <span style="color:#ca8a04;">(${j.newDonorCount} became donors)</span>` : '';
     return `<div style="font-size:13px;padding:3px 0;"><strong>${j.contentTopic}:</strong> ${j.jumperCount} readers jumped${donorNote}</div>`;
   }).join('');
 
-  // Survey themes
   const surveyHtml = metrics.surveyHighlights.byQuestion.map(q => {
     if (q.topThemes.length === 0) return '';
     const themes = q.topThemes.slice(0, 4).map(t => `${t.theme} (${t.count})`).join(', ');
@@ -81,7 +75,10 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
 
   return `
     <div style="margin:24px 0;padding:20px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;">
-      <h2 style="color:#1e3a5f;font-size:18px;margin:0 0 16px 0;">Computed Data Summary</h2>
+      <h2 style="color:#1e3a5f;font-size:18px;margin:0 0 4px 0;">Supporting Data</h2>
+      <p style="color:#6b7280;font-size:13px;margin:0 0 16px 0;">
+        The metrics below were computed from the raw audience data and used to generate the insights above.
+      </p>
       <p style="color:#6b7280;font-size:12px;margin:0 0 16px 0;">
         Period: ${metrics.overview.engagementPeriod} &bull;
         Sources: ${metrics.overview.dataSources.join(', ')} &bull;
@@ -92,8 +89,8 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
       <table style="width:100%;border-collapse:collapse;">${histogramRows}</table>
 
       <div style="background:#f0f9ff;border-radius:6px;padding:12px;margin:12px 0;">
-        <span style="color:#16a34a;font-weight:700;">↑ ${ec.jumpedCount}</span> jumped &bull;
-        <span style="color:#dc2626;font-weight:700;">↓ ${ec.declinedCount}</span> declined &bull;
+        <span style="color:#16a34a;font-weight:700;">&uarr; ${ec.jumpedCount}</span> jumped &bull;
+        <span style="color:#dc2626;font-weight:700;">&darr; ${ec.declinedCount}</span> declined &bull;
         <span style="color:#6b7280;">${ec.stableCount} stable</span>
       </div>
 
@@ -142,7 +139,6 @@ function buildDataSummaryHtml(metrics: MetricsSummary): string {
 
 export function generateEmailHTML(insights: InsightData, metrics?: MetricsSummary): string {
   const m = insights.topLineMetrics;
-
   const dataSummaryHtml = metrics ? buildDataSummaryHtml(metrics) : '';
 
   const sectionsHtml = insights.sections.map(section => {
@@ -165,7 +161,7 @@ export function generateEmailHTML(insights: InsightData, metrics?: MetricsSummar
     }).join('');
 
     return `
-      <div style="margin:32px 0;">
+      <div style="margin:24px 0;">
         <h2 style="color:${color};font-size:18px;border-bottom:2px solid ${color};padding-bottom:8px;margin-bottom:16px;">
           &#9632; ${section.category}
         </h2>
@@ -178,7 +174,7 @@ export function generateEmailHTML(insights: InsightData, metrics?: MetricsSummar
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsroom Radar Briefing — ${insights.briefingDate}</title>
+  <title>Newsroom Radar Briefing &mdash; ${insights.briefingDate}</title>
 </head>
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <div style="max-width:700px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;margin-top:24px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
@@ -189,7 +185,20 @@ export function generateEmailHTML(insights: InsightData, metrics?: MetricsSummar
     </div>
 
     <div style="padding:24px;">
-      <div style="text-align:center;background:#f0f9ff;border-radius:8px;padding:16px;margin-bottom:24px;">
+
+      <!-- What is this -->
+      <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px;margin-bottom:24px;">
+        <p style="color:#92400e;font-size:14px;line-height:1.6;margin:0;">
+          <strong>What you're looking at:</strong> This briefing was automatically generated by Newsroom Radar from
+          <strong>${insights.totalAudienceAnalyzed} audience records</strong> spanning ${metrics ? metrics.overview.dataSources.length : 'multiple'} data sources
+          (${metrics ? metrics.overview.dataSources.join(', ') : 'various platforms'}).
+          The system unified scattered audience data into a common schema, computed engagement metrics and behavioral patterns,
+          then used AI to synthesize the findings into the actionable insights below.
+        </p>
+      </div>
+
+      <!-- Top-line metrics -->
+      <div style="text-align:center;background:#f0f9ff;border-radius:8px;padding:16px;margin-bottom:16px;">
         <div style="display:inline-block;text-align:center;padding:0 16px;">
           <div style="font-size:28px;font-weight:700;color:#1e3a5f;">${m.totalReaders}</div>
           <div style="font-size:12px;color:#6b7280;">Total Readers</div>
@@ -207,22 +216,18 @@ export function generateEmailHTML(insights: InsightData, metrics?: MetricsSummar
           <div style="font-size:12px;color:#6b7280;">Donors</div>
         </div>
       </div>
+      <p style="color:#6b7280;font-size:13px;text-align:center;margin:0 0 24px 0;">Top topics: ${m.topTopics.join(' &bull; ')}</p>
 
-      <p style="color:#6b7280;font-size:13px;text-align:center;">Top topics: ${m.topTopics.join(' &bull; ')}</p>
-      <p style="color:#6b7280;font-size:13px;text-align:center;margin-bottom:8px;">${insights.totalAudienceAnalyzed} audience members analyzed</p>
+      <!-- INSIGHTS FIRST -->
+      ${sectionsHtml}
 
+      <!-- Data summary AFTER insights -->
       ${dataSummaryHtml}
 
-      <div style="margin:24px 0 8px 0;padding-top:16px;border-top:2px solid #1e3a5f;">
-        <h2 style="color:#1e3a5f;font-size:18px;margin:0;">AI-Synthesized Insights</h2>
-        <p style="color:#6b7280;font-size:13px;margin:4px 0 0 0;">The following insights were generated by analyzing the metrics above.</p>
-      </div>
-
-      ${sectionsHtml}
     </div>
 
     <div style="background:#f9fafb;padding:16px;text-align:center;border-top:1px solid #e5e7eb;">
-      <p style="color:#9ca3af;font-size:12px;margin:0;">Generated by Newsroom Radar — AI-powered audience intelligence for local newsrooms</p>
+      <p style="color:#9ca3af;font-size:12px;margin:0;">Generated by Newsroom Radar &mdash; AI-powered audience intelligence for local newsrooms</p>
     </div>
   </div>
 </body>
