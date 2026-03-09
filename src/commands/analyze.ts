@@ -30,11 +30,11 @@ export function registerAnalyzeCommand(program: Command): void {
         insightSpinner.succeed('Insights generated');
 
         if (options.outputFormat === 'terminal' || options.outputFormat === 'both') {
-          renderTerminalReport(insights);
+          renderTerminalReport(insights, metrics);
         }
 
         if (options.outputFormat === 'email' || options.outputFormat === 'both') {
-          await saveEmailReport(insights, options.outputPath);
+          await saveEmailReport(insights, options.outputPath, metrics);
           console.log(`\nEmail briefing saved to: ${options.outputPath}`);
         }
       } catch (error) {

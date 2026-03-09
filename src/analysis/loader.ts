@@ -7,6 +7,8 @@ export interface PersonRecord {
   familyName?: string;
   primaryEmail?: string;
   engagementScore?: number;
+  previousEngagementScore?: number;
+  engagementPeriod?: string; // e.g. "2025-Q3" — when previousEngagementScore was recorded
   tags?: string[];
   dataSource: string;
   location?: {
@@ -16,7 +18,9 @@ export interface PersonRecord {
   };
   behavior?: {
     donorStatus?: string;
+    previousDonorStatus?: string;
     lastDonationDate?: string;
+    firstDonationDate?: string;
   };
   interests?: {
     topics?: string[];
